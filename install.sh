@@ -200,11 +200,10 @@ if [ "$HALT_CHOICE" != "true" ]; then
     cp -r $CURRENT_DIR/web/config/* $WEB_CONF/
     chown -R www-data:www-data $WEB_DIR
     chmod -R 755 $WEB_DIR
-    # Set up pppoe configuration
+fi
+    # Set up pppoe configuration TODO!
     cp $CURRENT_DIR/web/pppoe/pppoe-server-options /etc/ppp/
     cp $CURRENT_DIR/web/pppoe/pap-secrets /etc/ppp/
-
-fi
 
 cat <<EOL >/etc/init.d/S99pppwn
 #!/bin/sh

@@ -53,6 +53,7 @@ while ! ping -c 1 192.168.1.2 >/dev/null 2>&1; do
     sleep 2
 done
 sleep 5
+GOLDHEN_ACTIVE=n ; TODO!
 if nmap -n -p 3232 192.168.1.2 | grep -q '3232/tcp open'; then
     echo "Goldhen found aborting pppwn"
     GOLDHEN_ACTIVE=y
